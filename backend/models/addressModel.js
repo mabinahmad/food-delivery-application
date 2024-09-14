@@ -9,7 +9,7 @@ const addressSchema = new Schema(
     lastName: { type: String },
     phone: { type: String, required: true },
     buildingNumber: { type: String, required: true },
-    street: { type: String, required: true },
+    street: { type: String },
     streetNumber: { type: String, required: true },
     city: { type: String, required: true },
     zone: { type: String },

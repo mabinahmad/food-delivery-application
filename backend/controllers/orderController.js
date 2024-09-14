@@ -83,7 +83,8 @@ const placeOrder = async (req, res) => {
         success_url: `${frontend_url}/verify?success=true&orderId=${newOrder._id}&session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${frontend_url}/verify?success=false&orderId=${newOrder._id}&session_id={CHECKOUT_SESSION_ID}`,
       });
-
+      console.log("sessionurl", session.url);
+      console.log("sessionid", session.id);
       // Respond with the session URL for redirection
       res.json({
         success: true,
@@ -100,7 +101,7 @@ const placeOrder = async (req, res) => {
 //--------------------------------------------------
 const verifyOrder = async (req, res) => {
   const { orderId, success, sessionId } = req.body;
-
+console.log("verify req.body",req.body)
   try {
     if (success == "true") {
       // Retrieve the Stripe session to confirm payment status
