@@ -191,7 +191,7 @@ export const PlaceOrder = () => {
         let response = await axios.post(API_ORDER_PLACE, orderData, {
           headers: { Authorization: token },
         });
-        console.log("place order response", response);
+
         if (response.data.success && response.data.session_url) {
           // Redirect to Stripe payment page
           window.location.replace(response.data.session_url);
