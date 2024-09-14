@@ -1,0 +1,129 @@
+.pickup-from-store {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  width: 42vw;
+  height: 50vh;
+  padding: 20px 3px;
+  padding-bottom: 50px;
+  border-radius: 10px;
+  box-shadow: 2px 1px 9px .5px rgba(0, 0, 0, 0.1);
+}
+.pickup-from-store .description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.pickup-from-store .description:hover {
+  transform: scale(1.1);
+}
+.pickup-from-store .description h2 {
+  color: #e4002b;
+  font-size: 1.4vw;
+}
+.pickup-from-store .description p {
+  font-size: 1.2vw;
+}
+
+.pickup-from-store .order-online-route {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.pickup-from-store .order-online-route .icon-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  background-color: #e4002b;
+  border-radius: 10px;
+  margin: 3px;
+  font-weight: bold;
+  color: rgb(240, 228, 228);
+}
+
+.pickup-from-store .order-online-route img {
+  width: 60px;
+
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+.pickup-from-store .description button {
+  border: 1px solid gray;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 11vw;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  color: #e4002b;
+  font-size: 1.2vw;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .pickup-from-store {
+    width: 100%;
+    height: 50vh;
+  }
+  .pickup-from-store .description {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+  .pickup-from-store .description h2 {
+    font-size: 3vw;
+  }
+  .pickup-from-store .description p {
+    font-size: 2vw;
+  }
+  .pickup-from-store .description button {
+    font-size: 2vw;
+    width: 20vw;
+  }
+  .pickup-from-store .order-online-route {
+    width: 100%;
+  }
+
+}
+@media (max-width: 768px) {
+  .pickup-from-store {
+    flex-direction: column;
+  }
+  .pickup-from-store .description h2 {
+    font-size: 3vw;
+  }
+  .pickup-from-store .description p {
+    font-size: 2vw;
+  }
+  .pickup-from-store .description button {
+    width: 17vw;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  .pickup-from-store .description button {
+    width: 40vw;
+    font-size: 13px;
+  }
+  .pickup-from-store .description .description h2 {
+    font-size: 1.2em;
+  }
+  .pickup-from-store .description p {
+    font-size: 3vw;
+  }
+  .pickup-from-store .description .description button {
+    font-size: 0.75em;
+  }
+  .pickup-from-store .order-online-route .icon-group p {
+    font-size: 3vw;
+  }
+}

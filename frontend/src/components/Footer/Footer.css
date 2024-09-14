@@ -1,0 +1,131 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 8vw;
+  padding-top: 40px;
+  color: #000000;
+}
+
+.footer-content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 80px;
+}
+
+.footer-content-left,
+.footer-content-right {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+.footer-social-icons {
+  display: flex;
+  justify-content: center;
+}
+.footer-content-left .company-name {
+  width: 120px;
+  text-align: center;
+  color: white;
+  background-color: #e4002b;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.footer-content-left li,
+.footer-content-right li,
+.footer-content-center li {
+  list-style: none;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.footer-social-icons .facebook-icon,
+.twitter-icon,
+.instagram-icon {
+  width: 40px;
+  margin-right: 15px;
+  font-size: 40px;
+}
+.footer-social-icons .facebook-icon {
+  color: blue;
+}
+.footer-social-icons .twitter-icon {
+  color: black;
+}
+.footer-social-icons .instagram-icon {
+  color: #e1306c;
+}
+.footer hr {
+  width: 100%;
+  height: 2px;
+  margin: 20px 0px;
+  background-color: gray;
+  border: none;
+}
+
+@media (max-width: 750px) {
+  .footer {
+    background-color: white;
+  }
+
+  .footer-content {
+    display: flex;
+    gap: 35px;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-copyright {
+    text-align: center;
+  }
+  .footer-content-left p {
+    display: none;
+  }
+
+  .footer-content-left {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-social-icons .facebook-icon,
+  .twitter-icon,
+  .instagram-icon {
+    width: 20px;
+  }
+  .footer-copyright {
+    color: rgb(102, 100, 100);
+  }
+  .footer-content-right h2 {
+    color: black;
+    font-size: 16px;
+  }
+  .footer-content-right li {
+    font-weight: bold;
+    color: black;
+    font-size: 12px;
+  }
+}
+@media (max-width: 470px) {
+  .footer-content {
+    flex-direction: column;
+  }
+  .footer-content-left {
+    flex-direction: column;
+  }
+  .footer-content-right {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-content-right h2 {
+    color: black;
+  }
+  .footer-content-right li {
+    font-weight: bold;
+    color: black;
+  }
+}

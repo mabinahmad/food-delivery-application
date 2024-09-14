@@ -1,0 +1,407 @@
+.orders {
+  background-color: white;
+  padding-top: 130px;
+  padding-bottom: 100px;
+}
+.order-history {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  max-height: 100vh;
+  color: black;
+  padding: 20px 20px 20px 20px;
+
+}
+.orders h1.orders-page-title {
+  color: black;
+  padding: 20px;
+  padding-left: 37px;
+  font-size: 55px;
+  font-weight: 900;
+}
+.orders .left {
+  flex: 1;
+  padding: 0px 20px 20px 20px;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.orders .left::-webkit-scrollbar {
+  display: none;
+}
+.orders .right {
+  height: 600px;
+  flex: 1;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 9px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  border-radius: 20px;
+}
+
+.left .order-item {
+  background-color: white;
+  height: 170px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 2px 9px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.order-item.selected-order {
+  border-right: 6px solid transparent;
+  border-right: 6px solid black;
+}
+.left .order-item .order-date {
+  font-size: 25px;
+  font-weight: bold;
+}
+.left .order-item .order-first-row-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.left .order-item .order-first-row-container .order-amount {
+  font-size: 20px;
+  font-weight: bold;
+}
+.left .delivered-time {
+  margin-top: 10px;
+  color: rgb(129, 123, 123);
+}
+.left .order-items-container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+}
+.left .order-items-container .item-image {
+  height: 90px;
+}
+.left .order-items-container .item-image img {
+  width: 100px;
+  height: 90px;
+}
+
+.right .order-item-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.orders .order-history .right .order-items-container img {
+  width: 100px;
+}
+.orders .order-history .right .order-items-container .order-item-details {
+  margin-top: 20px;
+}
+.right .item-name-and-image {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.right .price-and-quantity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right .item-quantity {
+  color: rgb(170, 167, 167);
+}
+
+.right .price-and-quantity .item-price {
+  font-weight: bold;
+}
+
+.right .title-text-your-order {
+  font-size: 25px;
+  font-weight: bold;
+}
+.right .delivery-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.right .delivery-information .order-status-icons {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 35px;
+  padding: 10px;
+  gap: 40px;
+}
+.right .order-status p.status-text {
+  text-align: center;
+  font-weight: bold;
+  color: rgb(185, 179, 179);
+}
+
+.right .order-status p.delivered-time {
+  margin-top: 5px;
+  font-size: 35px;
+  font-weight: 900;
+}
+.right .order-status-icons .status-icon {
+  border-radius: 50%;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: rgb(246, 241, 241);
+  border: none;
+  position: relative;
+}
+.order-status-icons .status-icon::before {
+  content: "";
+  position: absolute;
+  left: -62%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 41px;
+  height: 1px;
+  background-color: #000;
+}
+.status-icon:first-child::before {
+  display: none;
+}
+.right .order-status-icons .status-icon.active {
+  background-color: #d90217;
+  color: white;
+}
+
+.right .order-status-icons .status-icon.active::before {
+  background-color: #d90217;
+}
+.right .your-order-and-order-number {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.right .your-order-and-order-number p.order-number {
+  font-weight: bold;
+  padding: 6px;
+  background-color: rgb(247, 243, 243);
+  border-radius: 20px;
+  cursor: pointer;
+}
+.right .your-order-and-order-number p.order-number .copy-icon {
+  margin-left: 4px;
+  padding-top: 2px;
+  color: rgb(183, 176, 176);
+}
+.right .order-items-container hr {
+  margin: 15px 0px;
+}
+.right .order-items-container .total {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.right .order-items-container .total .items-amount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right .order-items-container .total .items-amount span {
+  font-size: 20px;
+}
+
+.right .order-items-container .total .delivery-charge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right .order-items-container .total .delivery-charge span {
+  font-size: 20px;
+}
+.right .order-items-container .total .paid-amount-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.right .order-items-container .total .paid-amount-container .paid-amount {
+  font-size: 35px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+.right .order-items-container .total .paid-amount-container .paid-method {
+  font-size: 17px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.right
+  .order-items-container
+  .total
+  .paid-amount-container
+  .paid-method
+  .cash-icon,
+.paid-method .card-icon {
+  font-size: 30px;
+  color: rgb(8, 151, 167);
+}
+
+.right .order-items-container .delivered-location {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.right .order-items-container .delivered-location span {
+  display: flex;
+  font-size: 25px;
+  padding: 20px;
+  background-color: lightgray;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.right .order-items-container .delivered-location p {
+  font-size: 20px;
+}
+.no-orders-text {
+  font-size: 30px;
+  font-weight: bold;
+}
+.left .order-items-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+.right .arrow-left {
+  display: none;
+}
+.your-order-and-order-number {
+  position: relative;
+}
+.tooltip {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 4px;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.copy-icon {
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .orders {
+    padding-top: 140px;
+  }
+  .order-history {
+    flex-direction: column;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    max-height: none;
+  }
+  .order-history .right {
+    display: none;
+  }
+  .order-history .left {
+    overflow-y: none;
+    padding: 2px;
+  }
+  .orders h1.orders-page-title {
+    padding-left: 0px;
+    font-size: 35px;
+    font-weight: 900;
+  }
+  .right .arrow-left {
+    font-weight: bold;
+    font-size: 25px;
+    color: green;
+    cursor: pointer;
+  }
+  .orders .order-history .left.hide {
+    display: none;
+  }
+  .orders .order-history .right.selected {
+    display: block;
+  }
+  .right .arrow-left {
+    display: block;
+  }
+}
+
+@media (max-width: 750px) {
+  .orders {
+    padding-top: 115px;
+  }
+}
+
+@media (max-width: 475px) {
+  .right .order-status p.delivered-time {
+    font-size: 25px;
+  }
+  .right .delivery-information .order-status-icons {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 35px;
+    padding: 10px;
+    gap: 20px;
+  }
+  .right .order-status-icons .status-icon {
+    border-radius: 50%;
+    padding: 3px;
+    padding-left: 13px;
+    padding-right: 13px;
+    background-color: rgb(246, 241, 241);
+    border: none;
+    position: relative;
+  }
+  .order-status-icons .status-icon::before {
+    content: "";
+    position: absolute;
+    left: -45%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 1px;
+    background-color: #000;
+  }
+
+  .right .order-status-icons .order-status-icon {
+    font-size: 20px;
+  }
+
+  .right .order-items-container .total .paid-amount-container .paid-amount {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 330px) {
+  .right .order-status p.delivered-time {
+    font-size: 17px;
+  }
+  .right .your-order-and-order-number p.order-number {
+    font-size: 12px;
+  }
+  .right .your-order-and-order-number .title-text-your-order {
+    font-size: 20px;
+  }
+}
