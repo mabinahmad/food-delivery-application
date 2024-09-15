@@ -41,7 +41,7 @@
 .login-popup-inputs {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  
 }
 
 .login-popup-inputs input {
@@ -49,6 +49,7 @@
   border: 1px solid #c9c9c9;
   padding: 10px;
   border-radius: 4px;
+  margin-bottom: 20px;
 }
 
 .login-popup-container button {
@@ -76,7 +77,10 @@
   font-weight: 500;
   cursor: pointer;
 }
-
+.login-popup .error-message {
+  color: red;
+  font-size: 10px;
+}
 @media (max-width: 475px) {
   .login-popup-container {
     width: 90%;

@@ -48,6 +48,7 @@ export const LoginPopup = ({ setShowLogin }) => {
   //--------------------------------------
   const onLoginSubmit = async (event) => {
     event.preventDefault();
+
     let newUrl = API_URL;
     // Determine the API URL based on the form state (Login or Signup)
     if (currentState === "Login") {
@@ -67,15 +68,34 @@ export const LoginPopup = ({ setShowLogin }) => {
         // fetchCartData(response.data.token);
         setShowLogin(false);
       } else {
+        toast.error("Login failed");
       }
     } catch (error) {
-      // toast.error(error);
+      toast.error("An error occurred while processing your request.");
     }
   };
 
   const handleLoginClose = () => {
     navigate("/");
     setShowLogin(false);
+  };
+
+  const handleSignup = () => {
+    setCurrentState("Sign Up");
+    setData({
+      name: "",
+      email: "",
+      password: "",
+    });
+  };
+
+  const handleLogin = () => {
+    setCurrentState("Login");
+    setData({
+      name: "",
+      email: "",
+      password: "",
+    });
   };
 
   return (
@@ -112,6 +132,9 @@ export const LoginPopup = ({ setShowLogin }) => {
             placeholder="Your email"
             required
           />
+          {currentState === "Sign Up" && (
+            <p>Password must be atleast 4 characters</p>
+          )}
           <input
             name="password"
             onChange={onChangeHandler}
@@ -128,13 +151,12 @@ export const LoginPopup = ({ setShowLogin }) => {
 
         {currentState === "Login" ? (
           <p>
-            Create a new account?{" "}
-            <span onClick={() => setCurrentState("Sign Up")}>Click here</span>
+            Create a new account? <span onClick={handleSignup}>Click here</span>
           </p>
         ) : (
           <p>
             Already have an account?{" "}
-            <span onClick={() => setCurrentState("Login")}>Login here</span>
+            <span onClick={handleLogin}>Login here</span>
           </p>
         )}
       </form>

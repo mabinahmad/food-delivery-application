@@ -67,7 +67,7 @@ const registerUser = async (req, res) => {
         message: "Please enter a valid email",
       });
     }
-    // Check if the password meets minimum length requirement (at least 8 characters)
+    // Check if the password meets minimum length requirement (at least 4 characters)
     if (password.length < 3) {
       return res.json({
         success: false,
