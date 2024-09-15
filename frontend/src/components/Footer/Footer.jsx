@@ -11,11 +11,6 @@ export const Footer = () => {
       <div className="footer-content">
         <div className="footer-content-left">
           <h1 className="company-name">Theen</h1>
-          <p>
-            Theen Restaurants specializes in Arabic cuisine, offering authentic
-            dishes with dine-in, take-away, and delivery options for a quality
-            dining experience
-          </p>
         </div>
         <div className="footer-social-icons">
           <a
