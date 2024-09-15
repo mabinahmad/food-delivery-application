@@ -51,9 +51,11 @@ const loginUser = async (req, res) => {
 //---------------------------------------------------------
 const registerUser = async (req, res) => {
   const { name, password, email } = req.body;
+
   try {
     // Check if the user with the given email already exists in the database
     const exists = await userModel.findOne({ email });
+
     if (exists) {
       return res.json({ success: false, message: "User already exists" });
     }
@@ -66,10 +68,10 @@ const registerUser = async (req, res) => {
       });
     }
     // Check if the password meets minimum length requirement (at least 8 characters)
-    if (password.length < 8) {
+    if (password.length < 3) {
       return res.json({
         success: false,
-        message: "Please enter a strong passowrd",
+        message: "The password must be at least 4 characters long",
       });
     }
 
