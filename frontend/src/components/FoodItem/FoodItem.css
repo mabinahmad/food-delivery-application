@@ -135,7 +135,7 @@
   width: 30px;
 }
 
-@media (min-width: 358px) and (max-width: 489px) {
+@media (min-width: 330px) and (max-width: 489px) {
   .food-item-image {
     width: 150px;
     padding: 10px;
@@ -156,6 +156,26 @@
     display: inline-block;
   }
 
+  .price-and-add-to-cart {
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+  }
+  .add-to-cart {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 330px) {
+  .food-item-image {
+    width: 140px;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+    object-fit: contain;
+  }
+  .food-item {
+    width: 140px;
+  }
   .price-and-add-to-cart {
     display: flex;
     flex-direction: column;
