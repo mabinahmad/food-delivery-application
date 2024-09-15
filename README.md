@@ -1,8 +1,9 @@
 ## FOOD DELIVERY APPLICATION
+![](https://res.cloudinary.com/dewu0skfo/image/upload/v1726429149/Food_Delivery_App/App_Images/home-desktop-view_kki9sg.png)
 ## Overview
 This is a MERN stack web application for a food delivery service, allowing users to browse menu items, place orders, and make payments online. It supports both cash and card payments, with order tracking.
 
-![Image Screenshot](https://res.cloudinary.com/dewu0skfo/image/upload/v1726429149/Food_Delivery_App/App_Images/home-desktop-view_kki9sg.png)
+
 
 ## Live Demo
 Explore the live demo of the application at: [Live Demo Link](https://food-delivery-application-ma.vercel.app/)
