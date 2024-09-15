@@ -10,19 +10,19 @@ Explore the live demo of the application at: [Live Demo Link](https://food-deliv
 ## Demo Login Credentials
 Use the following credentials to test the application:
 
-Email: demo@example.com  
-Password: demo1234
+Email: demo@demo.co
+Password: 1234
 
 ## Features
 
-- **Browse Menu:** View food items by category (e.g., Indian, Arabic, Chinese).
+- **Browse Menu:** View food items by category.
 - **Add to Cart:** Select items and add them to the shopping cart.
 - **Place Orders:** Place orders with the option to pay by cash or card.
 - **User Authentication:** Login and register for an account.
 - **Stripe Integration:** Card payments via Stripe.
-- **Order Tracking:** Track order status (order placed, in preparation, etc.).
-- **Mobile Friendly:** Responsive design for mobile and desktop views.
+- **Order Tracking:** Track order status (Food processing, Out for delivery, Delivered).
 - **Order History:** View past orders and their details.
+- **Mobile Friendly:** Responsive design for mobile,tablet and desktop views.
 
   ## Technologies Used
 
@@ -32,6 +32,7 @@ Password: demo1234
   - Axios (for API requests)
   - React Router (for navigation)
   - Toastify
+  - React Modal
   - Other frontend libraries
 
 - **Backend**:
@@ -42,7 +43,7 @@ Password: demo1234
   - Multer
   - Bcrypt
   - JWT
-  - Nodemailer
+  - Validator
   - Other backend technologies
 
 - **Deployment**:
